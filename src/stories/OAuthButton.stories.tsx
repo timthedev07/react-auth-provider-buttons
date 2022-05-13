@@ -1,5 +1,4 @@
 import { ComponentMeta } from "@storybook/react";
-
 import { OAuthButton } from "../components/OAuthButton";
 import { OAUTH_BUTTON_PROVIDERS } from "../types/providers";
 

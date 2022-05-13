@@ -9,7 +9,7 @@ import { useOAuthButton } from "./OAuthButtonContext";
 import { GithubIcon } from "../icons/GithubIcon";
 import { SpotifyIcon } from "../icons/SpotifyIcon";
 
-interface OAuthButtonProps {
+export interface OAuthButtonProps {
   provider: ProviderType;
   href: string | null | undefined;
   style?: React.CSSProperties;
