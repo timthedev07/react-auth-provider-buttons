@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/timthedev07/react-auth-provider-buttons.git",
   "author": "Tim <timbusiness.work07@gmail.com>",
