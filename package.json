@@ -1,7 +1,12 @@
 {
   "name": "react-auth-provider-buttons",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0",
+  "description": "React button components for \"Sign in with ...\"",
+  "main": "dist/index.js",
+  "repository": "https://github.com/timthedev07/react-auth-provider-buttons.git",
+  "author": "Tim <timbusiness.work07@gmail.com>",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
