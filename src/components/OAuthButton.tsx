@@ -7,6 +7,7 @@ import { capitalize } from "../utils/strings";
 import "../index.css";
 import { useOAuthButton } from "./OAuthButtonContext";
 import { GithubIcon } from "../icons/GithubIcon";
+import { SpotifyIcon } from "../icons/SpotifyIcon";
 
 interface OAuthButtonProps {
   provider: ProviderType;
@@ -19,6 +20,7 @@ const ICON_MAP = {
   google: GoogleIcon,
   microsoft: MicrosoftIcon,
   github: GithubIcon,
+  spotify: SpotifyIcon,
 };
 
 /**
