@@ -14,12 +14,20 @@
   padding-left: 20px;
   margin-top: 6px;
   margin-bottom: 6px;
+  cursor: pointer;
 }
 
 .oauth-button .oauth-button__icon {
   width: 18px;
   height: 18px;
   margin-left: auto;
+}
+
+.oauth-button:hover {
+  filter: brightness(1.06);
+}
+.oauth-button.oauth-button-dark:hover {
+  filter: brightness(0.95);
 }
 
 .oauth-button.oauth-button-google {

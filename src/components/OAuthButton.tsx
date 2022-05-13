@@ -2,9 +2,10 @@ import React from "react";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { GoogleIcon } from "../icons/GoogleIcon";
 import { MicrosoftIcon } from "../icons/MicrosoftIcon";
+import { ProviderType } from "../types/providers";
 import { capitalize } from "../utils/strings";
-
-type ProviderType = "google" | "discord" | "microsoft";
+import "../index.css";
+import { useOAuthButton } from "./OAuthButtonContext";
 
 interface OAuthButtonProps {
   provider: ProviderType;
@@ -27,6 +28,7 @@ export const OAuthButton: React.FC<OAuthButtonProps> = ({
   style,
 }) => {
   const Icon = ICON_MAP[provider];
+  const { isDarkTheme } = useOAuthButton();
 
   return !href ? (
     <button>No href provided</button>
@@ -35,7 +37,9 @@ export const OAuthButton: React.FC<OAuthButtonProps> = ({
       onClick={() => {
         window.location.href = href;
       }}
-      className={`oauth-button oauth-button-${provider}`}
+      className={`oauth-button oauth-button-${provider} ${
+        isDarkTheme ? "oauth-button-dark" : ""
+      }`}
       style={style}
     >
       {capitalize(provider)}
