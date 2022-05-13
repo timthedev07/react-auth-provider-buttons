@@ -1,4 +1,9 @@
+:root {
+  --transition-styles: box-shadow ease-in-out 200ms, filter ease-in-out 200ms;
+}
+
 .oauth-button {
+  transition: var(--transition-styles);
   height: 50px;
   min-width: 205px;
   width: 100%;
@@ -15,6 +20,7 @@
   margin-top: 6px;
   margin-bottom: 6px;
   cursor: pointer;
+  box-shadow: none;
 }
 
 .oauth-button .oauth-button__icon {
@@ -24,10 +30,13 @@
 }
 
 .oauth-button:hover {
-  filter: brightness(1.06);
+  transition: var(--transition-styles);
+  filter: brightness(1.08);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
 }
 .oauth-button.oauth-button-dark:hover {
-  filter: brightness(0.95);
+  transition: var(--transition-styles);
+  filter: brightness(0.93);
 }
 
 .oauth-button.oauth-button-google {
