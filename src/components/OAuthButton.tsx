@@ -6,6 +6,7 @@ import { ProviderType } from "../types/providers";
 import { capitalize } from "../utils/strings";
 import "../index.css";
 import { useOAuthButton } from "./OAuthButtonContext";
+import { GithubIcon } from "../icons/GithubIcon";
 
 interface OAuthButtonProps {
   provider: ProviderType;
@@ -17,6 +18,7 @@ const ICON_MAP = {
   discord: DiscordIcon,
   google: GoogleIcon,
   microsoft: MicrosoftIcon,
+  github: GithubIcon,
 };
 
 /**
