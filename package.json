@@ -21,8 +21,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build:lib": "rollup -c",
+    "build:storybook": "build-storybook -s public",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "predeploy": "yarn build-storybook",
+    "cleanup-deployment": "trash storybook-static || rm -rf storybook-static",
+    "deploy:lib": "yarn build:lib && npm publish",
+    "deploy:storybook": "yarn predeploy && gh-pages -d storybook-static && yarn cleanup-deployment"
   },
   "eslintConfig": {
     "extends": [
@@ -63,6 +68,7 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
+    "gh-pages": "^4.0.0",
     "rollup-plugin-css": "^1.0.10",
     "webpack": "^5.72.1"
   }
