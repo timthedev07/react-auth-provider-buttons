@@ -5,7 +5,6 @@ import { MicrosoftIcon } from "../icons/MicrosoftIcon";
 import { ProviderType } from "../types/providers";
 import { capitalize } from "../utils/strings";
 import "../index.css";
-import { useOAuthButton } from "./OAuthButtonContext";
 import { GithubIcon } from "../icons/GithubIcon";
 import { SpotifyIcon } from "../icons/SpotifyIcon";
 
@@ -13,6 +12,7 @@ export interface OAuthButtonProps {
   provider: ProviderType;
   href: string | null | undefined;
   style?: React.CSSProperties;
+  isDarkTheme?: boolean;
 }
 
 const ICON_MAP = {
@@ -30,9 +30,9 @@ export const OAuthButton: React.FC<OAuthButtonProps> = ({
   provider,
   href,
   style,
+  isDarkTheme = false,
 }) => {
   const Icon = ICON_MAP[provider];
-  const { isDarkTheme } = useOAuthButton();
 
   return !href ? (
     <button>No href provided</button>
